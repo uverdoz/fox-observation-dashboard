@@ -6,6 +6,7 @@ import StatsCards from "./components/StatsCards";
 import Filters from "./components/Filters";
 import ObservationTable from "./components/ObservationTable";
 import Charts from "./components/Charts";
+import AIWorklog from "./components/AIWorklog";
 
 import { foxData } from "./foxData";
 
@@ -49,6 +50,7 @@ function App() {
       <ObservationTable data={filteredData} />
 
       <Charts data={filteredData} />
+      <AIWorklog />
     </main>
   );
 }
