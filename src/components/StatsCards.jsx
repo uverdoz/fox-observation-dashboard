@@ -22,21 +22,25 @@ function StatsCards({ data }) {
             title: "Observations",
             value: totalObservations,
             color: "bg-emerald-500",
+            text: "text-emerald-600",
         },
         {
             title: "Unique Foxes",
             value: uniqueFoxes,
             color: "bg-orange-500",
+            text: "text-orange-500",
         },
         {
             title: "Locations",
             value: uniqueLocations,
             color: "bg-sky-500",
+            text: "text-sky-500",
         },
         {
             title: "Avg Suspicion",
             value: averageSuspicion,
             color: "bg-red-500",
+            text: "text-red-500",
         },
     ];
 
@@ -55,7 +59,7 @@ function StatsCards({ data }) {
                         {stat.title}
                     </p>
 
-                    <h2 className="text-3xl font-bold mt-2">
+                    <h2 className={`mt-2 text-4xl font-bold ${stat.text}`}>
                         {stat.value}
                     </h2>
                 </div>
