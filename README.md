@@ -1,16 +1,17 @@
 # Fox Observation Dashboard
 
-A React dashboard for monitoring fox observations.
+Interactive dashboard for monitoring fox observations.
 
 ## Features
 
-- Search by Fox ID
+- Search observations by Fox ID
 - Filter by location
 - Filter by prey status
 - Statistics cards
 - Observation table
 - Bar chart (Observations by Location)
 - Pie chart (Prey Distribution)
+- AI Worklog section
 
 ## Tech Stack
 
@@ -20,14 +21,14 @@ A React dashboard for monitoring fox observations.
 - Recharts
 - Lucide React
 
-## Installation
+## Getting Started
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Build
+## Production Build
 
 ```bash
 npm run build
@@ -35,4 +36,8 @@ npm run build
 
 ## Live Demo
 
-Vercel deployment.
+https://fox-observation-dashboard.vercel.app
+
+## Repository
+
+https://github.com/uverdoz/fox-observation-dashboard
