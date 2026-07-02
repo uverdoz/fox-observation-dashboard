@@ -21,47 +21,47 @@ function StatsCards({ data }) {
         {
             title: "Observations",
             value: totalObservations,
-            color: "bg-emerald-500",
-            text: "text-emerald-600",
+            dot: "bg-emerald-500",
+            text: "text-emerald-700",
         },
         {
             title: "Unique Foxes",
             value: uniqueFoxes,
-            color: "bg-orange-500",
-            text: "text-orange-500",
+            dot: "bg-orange-500",
+            text: "text-orange-700",
         },
         {
             title: "Locations",
             value: uniqueLocations,
-            color: "bg-sky-500",
-            text: "text-sky-500",
+            dot: "bg-sky-500",
+            text: "text-sky-700",
         },
         {
             title: "Avg Suspicion",
             value: averageSuspicion,
-            color: "bg-red-500",
-            text: "text-red-500",
+            dot: "bg-red-500",
+            text: "text-red-700",
         },
     ];
 
     return (
-        <section className="grid gap-4 mt-8 sm:grid-cols-2 lg:grid-cols-4">
+        <section className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
                 <div
                     key={stat.title}
-                    className="rounded-xl bg-white shadow-md p-6 border"
+                    className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
                 >
                     <div
-                        className={`w-3 h-3 rounded-full mb-3 ${stat.color}`}
+                        className={`mb-4 h-3 w-3 rounded-full ${stat.dot}`}
                     ></div>
 
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm font-medium text-gray-500">
                         {stat.title}
                     </p>
 
-                    <h2 className={`mt-2 text-4xl font-bold ${stat.text}`}>
+                    <p className={`mt-3 text-5xl font-extrabold tracking-tight ${stat.text}`}>
                         {stat.value}
-                    </h2>
+                    </p>
                 </div>
             ))}
         </section>
