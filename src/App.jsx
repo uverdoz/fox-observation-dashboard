@@ -16,9 +16,11 @@ function App() {
   const [fox, setFox] = useState("All Foxes");
 
   const filteredData = foxData.filter((item) => {
-    const matchesSearch = item.fox_id
-      .toLowerCase()
-      .includes(search.toLowerCase());
+    const query = search.toLowerCase().trim();
+
+    const matchesSearch =
+      item.fox_id.toLowerCase().includes(query) ||
+      item.fox_id.replace("fox_", "").includes(query);
 
     const matchesLocation =
       location === "All Locations" ||

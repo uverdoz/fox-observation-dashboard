@@ -17,8 +17,11 @@ function Filters({
             </h2>
 
             <div className="grid gap-4 md:grid-cols-3">
+
                 <input
                     type="text"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
                     placeholder="Search Fox ID..."
                     className="rounded-lg border border-gray-700 bg-gray-800 px-4 py-2 text-white outline-none focus:border-emerald-500"
                 />
@@ -26,6 +29,7 @@ function Filters({
                 <select
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
+                    className="rounded-lg border border-gray-700 bg-gray-800 px-4 py-2 text-white outline-none focus:border-emerald-500"
                 >
                     <option>All Locations</option>
 
@@ -39,11 +43,13 @@ function Filters({
                 <select
                     value={fox}
                     onChange={(e) => setFox(e.target.value)}
+                    className="rounded-lg border border-gray-700 bg-gray-800 px-4 py-2 text-white outline-none focus:border-emerald-500"
                 >
                     <option>All Foxes</option>
                     <option>Only With Prey</option>
                     <option>Only Without Prey</option>
                 </select>
+
             </div>
         </section>
     );
