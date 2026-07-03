@@ -1,4 +1,4 @@
-import { Bot, CheckCircle2 } from "lucide-react";
+import { Bot, CheckCircle2, Sparkles } from "lucide-react";
 
 function AIWorklog() {
     const steps = [
@@ -35,27 +35,39 @@ function AIWorklog() {
     ];
 
     return (
-        <section className="mt-10 rounded-xl border border-gray-700 bg-gray-900 p-6">
-            <div className="mb-6 flex items-center gap-3">
-                <Bot className="h-7 w-7 text-violet-400" />
-                <div>
-                    <h2 className="text-2xl font-bold text-white">
-                        AI Worklog
-                    </h2>
-                    <p className="text-sm text-gray-400">
-                        Summary of how AI was used during development.
-                    </p>
+        <section className="mt-10 overflow-hidden rounded-2xl border border-gray-700 bg-gray-900 shadow-lg">
+            <div className="border-b border-gray-700 bg-gradient-to-r from-violet-500/10 to-emerald-500/10 p-6">
+                <div className="flex items-center gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/15">
+                        <Bot className="h-6 w-6 text-violet-400" />
+                    </div>
+
+                    <div>
+                        <h2 className="text-2xl font-bold text-white">
+                            AI Worklog
+                        </h2>
+
+                        <p className="mt-1 text-sm text-gray-400">
+                            Summary of how AI was used throughout the development process.
+                        </p>
+                    </div>
+
+                    <div className="ml-auto hidden items-center gap-2 rounded-full bg-violet-500/10 px-3 py-1 text-xs font-medium text-violet-300 md:flex">
+                        <Sparkles className="h-3.5 w-3.5" />
+                        AI-assisted
+                    </div>
                 </div>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-5 p-6 md:grid-cols-2">
                 {steps.map((step) => (
                     <div
                         key={step.title}
-                        className="rounded-xl border border-gray-700 bg-gray-800 p-5 transition hover:border-emerald-500"
+                        className="rounded-xl border border-gray-700 bg-gray-800 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-lg"
                     >
-                        <div className="mb-3 flex items-center gap-2">
+                        <div className="mb-3 flex items-center gap-3">
                             <CheckCircle2 className="h-5 w-5 text-emerald-400" />
+
                             <h3 className="font-semibold text-white">
                                 {step.title}
                             </h3>
